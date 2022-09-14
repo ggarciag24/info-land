@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import OptionCard from './OptionCard';
 
 function SearchBar(){
     const [isSearchWord, setIsSearchWord] = React.useState('')
@@ -8,7 +9,6 @@ function SearchBar(){
     function handleSearch(e){
         e.preventDefault()
         setIsSearchWord(e.target[0].value);
-        
         retrieveData(e.target[0].value)
     }
 
@@ -30,6 +30,10 @@ function SearchBar(){
         }))
     }
 
+    const optionsElement = isResult.map((place, index) => {
+        return <OptionCard name={place} key={index}/>
+    })
+
     console.log(isResult);
 
     return(
@@ -38,6 +42,7 @@ function SearchBar(){
             <input type='text'></input>
             <button>Search</button>
             </form>
+            {optionsElement}
         </div>
     )
 }
