@@ -11,3 +11,10 @@ color: white;
   margin-right: 2rem;
 
 }
+
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
