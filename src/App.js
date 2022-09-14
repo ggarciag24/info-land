@@ -4,10 +4,16 @@ import Main from './components/Main';
 
 
 function App() {
+
+  function handleSelect(){
+    console.log('a selection has been made')
+  }
+
+
   return (
     <div className="App">
       <Header />
-      <Main />
+      <Main handleSelect={handleSelect}/>
     </div>
   );
 }

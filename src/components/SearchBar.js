@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import OptionCard from './OptionCard';
 
-function SearchBar(){
+function SearchBar(props){
     const [isSearchWord, setIsSearchWord] = React.useState('')
     const [isResult, setIsResult] = React.useState([])
+
 
 
     function handleSearch(e){
@@ -31,7 +32,7 @@ function SearchBar(){
     }
 
     const optionsElement = isResult.map((place, index) => {
-        return <OptionCard name={place} key={index}/>
+        return <OptionCard name={place} key={index} handleSelect={props.handleSelect}/>
     })
 
     console.log(isResult);

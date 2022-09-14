@@ -1,9 +1,10 @@
 import React from 'react';
 
 function CountryInfo(){
+    
     return(
-        <div>
-            MAI
+        <div className='country-info'>
+            Country Info
         </div>
     )
 }
