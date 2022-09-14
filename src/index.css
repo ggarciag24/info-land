@@ -18,8 +18,23 @@ color: white;
   align-items: center;
   justify-content: center;
 }
+input {
+  height: 2rem;
+  width: 10rem;
+}
+
+button {
+  height: 2.4rem;
+  width: 4rem;
+}
 
 .option {
+  display: flex;
+  justify-content: center;
+  color: black;
   border: 1px solid white;
   padding: 1rem;
+  width: 20%;
+  background: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,.3));
+  backdrop-filter: blur(4px);
 }
