@@ -6,7 +6,13 @@ function Main(props){
     return(
         <div>
             <SearchBar handleSelect={props.handleSelect}/>
-            <CountryInfo />
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
+            {props.countryData.name !== '' && <CountryInfo countryData={props.countryData}/>}
         </div>
     )
 }

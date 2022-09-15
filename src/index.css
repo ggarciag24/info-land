@@ -45,9 +45,28 @@ button {
 
 .country-info {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border: 1px solid white;
+  color: black;
+  background: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,.3));
+  backdrop-filter: blur(4px);
   height: 20rem;
   width: 60%;
   margin-left: 20%;
+}
+
+.country-info-head {
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  height: 6rem;
+  width: 7rem;
+}
+
+.map {
+  height: 30rem;
+  width: 30rem;
 }
