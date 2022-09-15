@@ -11,6 +11,7 @@ function SearchBar(props){
         e.preventDefault()
         setIsSearchWord(e.target[0].value);
         retrieveData(e.target[0].value)
+        e.target[0].value = '';
     }
 
 
@@ -36,6 +37,8 @@ function SearchBar(props){
     })
 
     console.log(isResult);
+
+
 
     return(
         <div className='search'>
