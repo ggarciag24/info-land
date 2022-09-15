@@ -2,6 +2,9 @@ import React from 'react';
 import './index.css';
 import Header from './components/Header';
 import Main from './components/Main';
+import About from './components/About';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+
 
 
 function App() {
@@ -39,10 +42,18 @@ function App() {
 
 
   return (
+    <Router>
     <div className="App">
       <Header />
-      <Main handleSelect={handleSelect} countryData={isCountryData} />
+      <Routes>
+      <Route path='/' element={<Main handleSelect={handleSelect} countryData={isCountryData} />}>
+      </Route>
+      <Route path='/about' element={<About />}>
+      </Route>
+      </Routes>
+
     </div>
+    </Router>
   );
 }
 
