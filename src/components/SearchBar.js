@@ -15,6 +15,12 @@ function SearchBar(props){
     }
 
 
+    function handleOptionSelect(country) {
+        props.handleSelect(country)
+        setIsResult([])
+    }
+
+
     function retrieveData(word){
         fetch(`https://restcountries.com/v3.1/all`)
         .then(res => res.json())
@@ -26,14 +32,14 @@ function SearchBar(props){
                         place.name.common
                     ]
                 }))
-            } else {
+            } else { 
                 return isResult;
             }
         }))
     }
 
     const optionsElement = isResult.map((place, index) => {
-        return <OptionCard name={place} key={index} handleSelect={props.handleSelect}/>
+        return <OptionCard name={place} key={index} handleOptionSelect={handleOptionSelect}/>
     })
 
     console.log(isResult);

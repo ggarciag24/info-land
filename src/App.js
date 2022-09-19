@@ -20,8 +20,7 @@ function App() {
     // language: ''
   })
 
-  function handleSelect(e){
-    const country = e.target.innerText
+  function handleSelect(country){
 
     fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then(res => res.json())
