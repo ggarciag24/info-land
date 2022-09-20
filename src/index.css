@@ -51,9 +51,10 @@ button {
   color: black;
   background: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,.3));
   backdrop-filter: blur(4px);
-  height: 20rem;
+  height: 28rem;
   width: 60%;
   margin-left: 20%;
+  padding-left: 2rem;
 }
 
 .country-info-head {
@@ -76,4 +77,14 @@ button {
   color: black;
   background: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,.3));
   backdrop-filter: blur(4px);
+}
+
+.country-name {
+  margin-left: 5rem;
+}
+
+.map-btn {
+  width: 90%;
+  background-color: lightblue;
+  
 }
