@@ -9,7 +9,6 @@ color: white;
   justify-content:space-between;
   margin-left: 2rem;
   margin-right: 2rem;
-
 }
 
 .search {
@@ -86,5 +85,31 @@ button {
 .map-btn {
   width: 90%;
   background-color: lightblue;
-  
+}
+
+.all-countries-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid white;
+  max-width: 100vw;
+}
+
+.countryCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid white;
+  height: 5rem;
+}
+
+.countryCard-flag {
+  height: 2rem;
+  width: 3rem;
+}
+
+label {
+  font-weight: bold;
+  color:chartreuse;
+  text-shadow: 2px;
 }
