@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import OptionCard from './OptionCard';
 
 function SearchBar(props){
@@ -9,11 +9,14 @@ function SearchBar(props){
 
     function handleSearch(e){
         e.preventDefault()
-        setIsSearchWord(e.target[0].value);
-        retrieveData(e.target[0].value)
-        e.target[0].value = '';
+        retrieveData(isSearchWord)
+        setIsSearchWord('')
     }
 
+
+    function handleChange(e){
+        setIsSearchWord(e.target.value);
+    }
 
     function handleOptionSelect(country) {
         props.handleSelect(country)
@@ -42,15 +45,11 @@ function SearchBar(props){
         return <OptionCard name={place} key={index} handleOptionSelect={handleOptionSelect}/>
     })
 
-    console.log(isResult);
-
-
-
     return(
         <div className='search'>
             <form onSubmit={handleSearch}>
-            <input type='text'></input>
-            <button>Search</button>
+            <input value={isSearchWord} type='text' onChange={handleChange}></input>
+            <button data-testid='searchBtn'>Search</button>
             </form>
             {optionsElement}
         </div>

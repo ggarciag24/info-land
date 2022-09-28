@@ -45,6 +45,7 @@ sortCountries();
 
 const countryElement = filteredArr.map((place, index) => {
     return <CountryCard key={index}
+    data-testid={index}
         name={place.name.common} 
         capital={place.capital}
         region={place.region}
@@ -65,6 +66,7 @@ function handleFilter(e){
 }
     return(
         <div>
+        <div className='allCountriesPageBtns'>
             <label>Filter by Region: 
             <select value={isFilter} onChange={handleFilter}>
                 <option value="all">All</option>
@@ -83,7 +85,7 @@ function handleFilter(e){
                 <option value="leastPopulated">least populated</option>
             </select>
             </label>
-
+            </div>
         <div className='all-countries-container'>
             <div>
             {countryElement}
