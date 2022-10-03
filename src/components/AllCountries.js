@@ -87,9 +87,7 @@ function handleFilter(e){
             </label>
             </div>
         <div className='all-countries-container'>
-            <div>
             {countryElement}
-            </div>
         </div>
         </div>
     )
