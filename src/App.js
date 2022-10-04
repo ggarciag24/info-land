@@ -3,7 +3,6 @@ import './index.css';
 import Header from './components/Header';
 import Main from './components/Main';
 import About from './components/About';
-import AllCountries from './components/AllCountries';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 
@@ -47,8 +46,6 @@ function App() {
       <Header />
       <Routes>
       <Route path='/' element={<Main handleSelect={handleSelect} countryData={isCountryData} />}>
-      </Route>
-      <Route path='/all' element={<AllCountries />}>
       </Route>
       <Route path='/about' element={<About />}>
       </Route>

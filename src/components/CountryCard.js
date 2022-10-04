@@ -8,7 +8,7 @@ function CountryCard(props){
     }
 
     return (
-        <div className='countryCard'>
+        <div className='countryCard' onClick={(e) => props.elementClicked(e, props.name)}>
             <img className='countryCard-flag' src={props.flag}/>
             <p>{props.name}</p>
             <p><label>Capital: </label>{props.capital}</p>
