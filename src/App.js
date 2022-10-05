@@ -39,13 +39,17 @@ function App() {
   }
   console.log(isCountryData)
 
+  function handleX() {
+    setIsCountryData({name: ''})
+  }
+
 
   return (
     <Router>
     <div className="App">
       <Header />
       <Routes>
-      <Route path='/' element={<Main handleSelect={handleSelect} countryData={isCountryData} />}>
+      <Route path='/' element={<Main handleSelect={handleSelect} countryData={isCountryData} handleX={handleX}/>}>
       </Route>
       <Route path='/about' element={<About />}>
       </Route>

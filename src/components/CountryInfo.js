@@ -9,6 +9,7 @@ function CountryInfo(props){
 
     return(
         <div className='country-info'>
+            <div className='x'><button onClick={props.handleX}>X</button></div>
             <div className='country-info-head'>
             <img src={props.countryData.flag} className='flag'/>
             <h1 className='country-name'>{props.countryData.name}</h1>

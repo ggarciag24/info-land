@@ -47,6 +47,12 @@ button {
   background-color: yellow;
 }
 
+.x{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+
 .country-info {
   display: flex;
   flex-direction: column;

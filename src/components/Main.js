@@ -108,6 +108,7 @@ function handleFilter(e){
 }
 
 
+
     return(
         <div>
             <div className='search'>
@@ -121,7 +122,7 @@ function handleFilter(e){
             <br></br>
             <br></br>
 
-            {props.countryData.name !== '' && <CountryInfo countryData={props.countryData}/>}
+            {props.countryData.name !== '' && <CountryInfo countryData={props.countryData} handleX={props.handleX}/>}
             <div>
         <div className='allCountriesPageBtns'>
             <label>Filter by Region: 
