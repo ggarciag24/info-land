@@ -30,10 +30,8 @@ test('when the country is searched the option div appears', () => {
 test('when clicking on the option card the countries information is displayed', async() => {
   const countryNameElement = screen.queryByText(/uruguay/i);
   const countryCapitalElement = screen.queryByText(/montevideo/i);
-  const countryRegionElement = screen.queryByText(/americas/i);
   expect(countryNameElement).toBeNull();
   expect(countryCapitalElement).toBeNull();
-  expect(countryRegionElement).toBeNull();
 
   search();
 
@@ -42,23 +40,16 @@ test('when clicking on the option card the countries information is displayed', 
 
   const countryNameElementAgain = await waitFor(() => screen.findByText(/uruguay/i));
   const countryCapitalElementAgain = await waitFor(() => screen.findByText(/montevideo/i));
-  const countryRegionElementAgain = await waitFor(() => screen.findByText(/americas/i));
   expect(countryNameElementAgain).toBeInTheDocument();
   expect(countryCapitalElementAgain).toBeInTheDocument();
-  expect(countryRegionElementAgain).toBeInTheDocument();
 });
 
-test('when the all countries route in the heading is clicked it displays the all countries list', async() => {
-  const allCountriesRouteElement = screen.getByRole('heading', {  name: /all countries/i});
-  expect(allCountriesRouteElement). toBeInTheDocument();
-  fireEvent.click(allCountriesRouteElement);
+test('all countries list is displayed on render', async() => {
   const firstListElement = await waitFor(() => screen.getByText(/afghanistan/i));
   expect(firstListElement).toBeInTheDocument();
 })
 
 test('when the filter is changed to each option the list is populated with the correct countries', async() => {
-  const allCountriesRouteElement = screen.getByRole('heading', {  name: /all countries/i});
-  fireEvent.click(allCountriesRouteElement);
   const filterElement = screen.getByRole('combobox', {  name: /filter by region:/i})
   expect(filterElement).toBeInTheDocument();
   fireEvent.change(filterElement,{target: {value: 'Americas'}});
